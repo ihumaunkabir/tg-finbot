@@ -1,4 +1,5 @@
 from config import TOKEN
+from errorhandler import error
 from commands import start_command, help_command, info_command
 from processchat import handle_message, process_file, process_image
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
