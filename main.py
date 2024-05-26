@@ -1,14 +1,7 @@
-from urllib.request import urlopen
-from config import TOKEN, BOT_USER
-from handler import handle_file, handle_resp
+from config import TOKEN
 from commands import start_command, help_command, info_command
 from processchat import handle_message, process_file, process_image
-from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-
-
-async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    print(f'Update {update} cause error {context.error}')
+from telegram.ext import Application, CommandHandler, MessageHandler, filters
 
 
 if __name__ == '__main__':
