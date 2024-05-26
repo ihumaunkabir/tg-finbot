@@ -7,8 +7,8 @@ def handle_resp(text: str) -> str:
     text = text.lower()
     if 'hello' in text:
         return 'Hello'
-    elif 'bangladesh' in text:
-        return 'Bangladesh is a south asian country.'
+    elif 'thank' in text:
+        return 'great.'
     else:
         return 'I do not understand.'
     
