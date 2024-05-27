@@ -1,7 +1,8 @@
 import unittest
 
 class TestMain(unittest.TestCase):
-    pass
+    def test_start_command(self):
+        pass
 
 if __name__ == '__main__':
     unittest.main()
