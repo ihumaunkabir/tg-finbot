@@ -1,7 +1,7 @@
 from config import BOT_USER
 from handler import handle_file, handle_resp
-from telegram import Update
-from telegram.ext import ContextTypes
+from telegram import Update # type: ignore
+from telegram.ext import ContextTypes # type: ignore
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -13,8 +13,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if BOT_USER in text:
             new_text: str = text.replace(BOT_USER, '').strip()
             response: str = handle_resp(new_text)
-        else:
-            return
     else:
         response: str = handle_resp(text)
 
