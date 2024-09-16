@@ -1,7 +1,7 @@
 from config import BOT_TOKEN
-from errorhandler import error
-from commands import start_command, help_command, info_command
-from processchat import handle_message, process_file, process_image
+from utilities.errorhandler import error
+from commands.commands import start_command, help_command, info_command
+from src.processchat import handle_message, process_file, process_image
 from telegram.ext import Application, CommandHandler, MessageHandler, filters # type: ignore
 
 
