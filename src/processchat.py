@@ -1,5 +1,5 @@
-from config import BOT_USER
-from handler import handle_file, handle_resp
+from config.config import BOT_USER
+from handler.handler import handle_file, handle_resp
 from telegram import Update # type: ignore
 from telegram.ext import ContextTypes # type: ignore
 

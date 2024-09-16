@@ -1,4 +1,4 @@
-from config import BOT_TOKEN
+from config.config import BOT_TOKEN
 from utilities.errorhandler import error
 from commands.commands import start_command, help_command, info_command
 from src.processchat import handle_message, process_file, process_image

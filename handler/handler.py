@@ -1,6 +1,6 @@
 import json
 import requests
-from config import APIURL, VLLM, BEARER
+from config.config import APIURL, VLLM, BEARER
 
 
 def handle_resp(text: str) -> str:
