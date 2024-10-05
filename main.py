@@ -4,7 +4,6 @@ from commands.commands import start_command, help_command, info_command
 from src.processchat import handle_message, process_file, process_image
 from telegram.ext import Application, CommandHandler, MessageHandler, filters # type: ignore
 
-
 if __name__ == '__main__':
     print('Bot started...')
     app = Application.builder().token(BOT_TOKEN).build()

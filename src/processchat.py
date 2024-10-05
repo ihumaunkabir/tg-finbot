@@ -3,7 +3,6 @@ from handler.handler import handle_file, handle_resp
 from telegram import Update # type: ignore
 from telegram.ext import ContextTypes # type: ignore
 
-
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message_type: str = update.message.chat.type
     text: str = update.message.text

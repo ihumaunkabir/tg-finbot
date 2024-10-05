@@ -2,7 +2,6 @@ import json
 import requests
 from config.config import APIURL, VLLM, BEARER
 
-
 def handle_resp(text: str) -> str:
     headers = {"Authorization": BEARER}
     respurl = requests.post(APIURL, timeout=120,headers=headers, data=json.dumps({"stream":False,"prompt": text,"model":VLLM, "temperature":0.4}))
