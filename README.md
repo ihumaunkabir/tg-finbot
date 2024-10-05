@@ -23,7 +23,7 @@ BEARER: Final = "Bearer bearertokenhere"
 ```
 
 #### Backend
-Run the backend of bot by
+Run the backend of bot.
 ```
 python main.py
 ```
@@ -35,3 +35,8 @@ Bot polling...
 
 #### Example Usage
 Once your bot is running as well as your API is serving properly. Start interacting with your bot. 
+
+![chatimage](static/chat.png)
+
+#### License
+MIT
