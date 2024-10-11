@@ -33,6 +33,12 @@ Bot started...
 Bot polling...
 ```
 
+#### Docker
+Build and run the application on docker containers. 
+```
+docker compose up --build
+```
+
 #### Example Usage
 Once your bot is running as well as your API is serving properly. Start interacting with your bot. 
 
