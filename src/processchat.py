@@ -8,15 +8,20 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text: str = update.message.text
     print(f'User({update.message.chat.id}) in {message_type}: "{text}"')
 
-    if message_type == "group":
+    response = None
+
+    if message_type in ("group", "supergroup"):
         if BOT_USER in text:
             new_text: str = text.replace(BOT_USER, '').strip()
-            response: str = handle_resp(new_text)
-    else:
-        response: str = handle_resp(text)
+            response = handle_resp(new_text)
 
-    print(f'Bot: {response}')
-    await update.message.reply_text(response)
+    elif message_type == "private":
+        response = handle_resp(text)
+
+    if response:
+        print(f'Bot: {response}')
+        await update.message.reply_text(response)
+
 
 async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(f'Update {update} cause error {context.error}')
