@@ -8,7 +8,7 @@ if __name__ == '__main__':
     print('Bot started...')
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler('start', start_command))
-    app.add_handler(CommandHandler('help', help_command))
+    # app.add_handler(CommandHandler('help', help_command))
     # app.add_handler(CommandHandler('info', info_command))
     # app.add_handler(MessageHandler(filters.PHOTO, process_image))
     # app.add_handler(MessageHandler(filters.Document.PDF, process_file))

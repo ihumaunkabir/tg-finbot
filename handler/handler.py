@@ -1,19 +1,19 @@
 import json
 import requests
-from config.config import APIURL, VLLM, BEARER
+from config.config import APIURL, MODEL, SYSPROMPT
 
 def handle_resp(text: str) -> str:
-    headers = {"Authorization": BEARER}
-    respurl = requests.post(APIURL, timeout=120,headers=headers, data=json.dumps({"stream":False,"prompt": text,"model":VLLM, "temperature":0.4}))
+#     headers = {"Authorization": BEARER}
+    respurl = requests.post(APIURL, timeout=120, data=json.dumps({ "model": MODEL, "messages": [{"role": "system", "content": SYSPROMPT},{"role": "user","content": text}],"stream": False}))
     # print(f'API response is: {respurl.text}')
     json_obj = json.loads(respurl.text)
-    resptext = json_obj['response']
+    resptext = json_obj['message']['content']
 
     print(respurl.status_code)
     if respurl.status_code == 200:
          return resptext
     else:
-          return 'Unfortunately I am offline, thanks you.'
+          return 'I am offline, try again later.'
 
 def handle_file(path):
         print(path)
