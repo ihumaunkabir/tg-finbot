@@ -18,7 +18,7 @@ from typing import Final
 BOT_TOKEN: Final = 'yourbottoken'
 BOT_USER: Final = '@username'
 APIURL: Final = 'llmapiendpoint'
-VLLM: Final = 'mistral-nemo'
+MODEL: Final = 'llama3.2:1b'
 BEARER: Final = "Bearer bearertokenhere"
 ```
 
