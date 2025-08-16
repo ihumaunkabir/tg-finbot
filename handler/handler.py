@@ -8,7 +8,7 @@ def handle_resp(text: str, last_text: str, last_resp: str) -> str:
     if last_resp is None:
           last_resp = ""
 
-#     headers = {"Authorization": BEARER}
+    # headers = {"Authorization": BEARER}
     respurl = requests.post(APIURL, timeout=120, data=json.dumps({ "model": MODEL, "messages": [{"role": "system", "content": SYSPROMPT},{"role": "user", "content": last_text}, {"role": "assistant", "content": last_resp},{"role": "user","content": text}],"stream": False}))
     # print(f'API response is: {respurl.text}')
     json_obj = json.loads(respurl.text)

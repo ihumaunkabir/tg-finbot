@@ -7,11 +7,11 @@ from telegram.ext import ContextTypes  # type: ignore
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message_type: str = update.message.chat.type
     text: str = update.message.text
-    # print(f'User({update.message.chat.id}) in {message_type}: "{text}"')
+    print(f'User({update.message.chat.id}) in {message_type}: "{text}"')
     
     prev_text = context.user_data.get('prev_text')
     prev_response = context.user_data.get('last_response')
-    print(f'PrevT: {prev_text}\n PrevR: {prev_response}')
+    print(f'PrevText: {prev_text}\nPrevResponse: {prev_response}')
 
     response = None
 
